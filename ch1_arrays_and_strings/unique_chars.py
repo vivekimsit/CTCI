@@ -3,12 +3,12 @@
 import unittest
 
 
-def is_unique(input_string):
+def is_unique_naive(input_string):
     """Naive implementation"""
     return len(set(input_string)) == len(input_string)
 
 
-def is_uniq(strr):
+def is_unique(strr):
     """Without using any library functions"""
     def _contains(string, char):
         for c in string:
