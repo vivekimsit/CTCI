@@ -4,10 +4,12 @@ import unittest
 
 
 def is_permutation_naive(source, target):
+    """O(nlogn)"""
     return sorted(source) == sorted(target)
 
 
 def is_permutation(source, target):
+    """Using character counting, O(n)"""
     character_count = [0 for _ in range(256)]  # ASCII chars
 
     for char in source:
