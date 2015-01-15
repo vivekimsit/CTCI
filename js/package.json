@@ -1,0 +1,32 @@
+{
+  "name": "ctci",
+  "version": "0.0.0",
+  "description": "CTCI solutions in js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vivekimsit/ctci.git"
+  },
+  "keywords": [
+    "nodejs",
+    "learning",
+    "cs theory",
+    "algorithm"
+  ],
+  "author": "Vivek Poddar <vivekimsit@gmail.com> (http://www.vivekpoddar.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vivekimsit/ctci/issues"
+  },
+  "homepage": "https://github.com/vivekimsit/ctci",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "gulp": "^3.8.10",
+    "gulp-mocha": "^2.0.0",
+    "mocha": "^2.1.0",
+    "require-directory": "latest"
+  }
+}
