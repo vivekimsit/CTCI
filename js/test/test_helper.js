@@ -1,2 +1,2 @@
 require('../src');
-module.exports = should = require('chai').should;
+module.exports = expect = require('chai').expect;
