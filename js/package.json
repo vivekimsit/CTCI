@@ -26,6 +26,7 @@
     "chai": "^1.10.0",
     "gulp": "^3.8.10",
     "gulp-mocha": "^2.0.0",
+    "gulp-watch": "^4.1.1",
     "mocha": "^2.1.0",
     "require-directory": "latest"
   }

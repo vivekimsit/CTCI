@@ -1,23 +1,25 @@
-var gulp = require('gulp');
-var mocha = require('gulp-mocha');
+var gulp  = require('gulp'),
+    sources     = ['src/**/*.js'],
+    testSources = ['test/**/*.js'],
+    allSources  = sources.concat(testSources);
 
 gulp.task('default', function() {
-  return gulp.src(['test/**/*.js'], { read: false })
-    .pipe(mocha({
-      reporter: 'spec',
-      globals: {
-        //should: require('should')
-      }
-    }));
+  gulp.start('test');
 });
 
 
-gulp.task('mocha', function() {
-  return gulp.src(['test/**/*.js'], { read: false })
-      .pipe(mocha({ reporter: 'list' }));
+gulp.task('watch', function() {
+  gulp.watch(allSources, function() {
+    gulp.run('test');
+  });
 });
 
 
-gulp.task('watch-mocha', function() {
-  gulp.watch(['src/**', 'test/**'], ['mocha']);
+gulp.task('test', function() {
+  var mocha = require('gulp-mocha');
+  gulp.src(testSources)
+      .pipe(mocha({ reporter: 'spec', growl: true }))
+      .on('error', function(err) {
+        this.emit('end'); // avoid crashing on error
+      });
 });
